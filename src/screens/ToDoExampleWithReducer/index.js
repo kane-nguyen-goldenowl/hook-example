@@ -1,70 +1,19 @@
-import React, {
-    useReducer,
-} from 'react';
+import React from 'react';
 
 import './index.css';
 
-// Init State
-const initState = {
-    todo: "",
-    toDoList: []
-}
-// Action
-const SET_TO_DO = 'SET_TO_DO';
-const ADD_TO_DO = 'ADD_TO_DO';
-const DELETE_TO_DO = 'DELETE_TO_DO';
-const setToDo = (payload) => {
-    return {
-        type: SET_TO_DO,
-        payload
-    }
-}
+import {
+    useToDoReducer
+} from './reducer';
 
-const addToDo = (payload) => {
-    return {
-        type: ADD_TO_DO,
-        payload
-    }
-}
-
-const deleteToDo = (payload) => {
-    return {
-        type: DELETE_TO_DO,
-        payload
-    }
-}
-// Reducer
-const reducer = (state, action) => {
-    switch (action.type) {
-        case SET_TO_DO:
-            return {
-                ...state,
-                todo: action.payload
-            }
-        case ADD_TO_DO:
-            return {
-                ...state,
-                todo: "",
-                toDoList: [
-                    ...state.toDoList,
-                    action.payload
-                ]
-            }
-        case DELETE_TO_DO:
-            const newToDoList = [...state.toDoList];
-            newToDoList.splice(action.payload, 1);
-            return {
-                ...state,
-                toDoList: newToDoList
-            }
-        default:
-            return state;
-    }
-}
-// Dispatch
+import {
+    setToDo,
+    addToDo,
+    deleteToDo
+} from './actions';
 
 function ToDoExample() {
-    const [state, dispatch] = useReducer(reducer, initState);
+    const [state, dispatch] = useToDoReducer();
     const {
         todo,
         toDoList
