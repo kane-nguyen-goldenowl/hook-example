@@ -34,6 +34,10 @@ function Login() {
         setFormLogin({ ...formLogin });
     }
 
+    function handleSubmitForm(event) {
+        if (event.keyCode === 13) handleLogin();
+    }
+
     const handleLogin = async () => {
         try {
             console.log("handleLogin")
@@ -69,6 +73,7 @@ function Login() {
                         id="username"
                         type="text"
                         onChange={handleChangeInput}
+                        onKeyUp={handleSubmitForm}
                         value={formLogin.username} />
                 </div>
                 <div>
@@ -77,6 +82,7 @@ function Login() {
                         id="password"
                         type="password"
                         onChange={handleChangeInput}
+                        onKeyUp={handleSubmitForm}
                         value={formLogin.password} />
                 </div>
                 <div>
