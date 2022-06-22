@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-    Link
+    Link,
+    useNavigate
 } from 'react-router-dom';
 import {
     useAuth
@@ -10,19 +11,21 @@ import './index.css';
 
 function Nav() {
     const { auth, handleLogoutSuccess } = useAuth();
+    const navigate = useNavigate();
 
     const handleLogout = () => {
         handleLogoutSuccess();
     };
 
+    const redirectToLogin = () => {
+        navigate('/login');
+    }
+
     return (
-        <nav>
-            <ul className="nav-ul">
+        <nav className='nav'>
+            <ul className="nav-left">
                 <li>
                     <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/login">Login</Link>
                 </li>
                 <li>
                     <Link to="/glance">Hooks at a Glance</Link>
@@ -34,7 +37,10 @@ function Nav() {
                     <Link to="/to-do-example-with-reducer">ToDo Example With Reducer</Link>
                 </li>
             </ul>
-            {auth && <button onClick={handleLogout}>Logout</button>}
+            <div className='nav-right'>
+                {auth && <button onClick={handleLogout}>Logout</button>}
+                {!auth && <button onClick={redirectToLogin}>Login</button>}
+            </div>
         </nav >
     );
 }
