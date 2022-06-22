@@ -45,6 +45,9 @@ function Nav() {
                         <li>
                             <Link to="/to-do-example-with-reducer">ToDo Example With Reducer</Link>
                         </li>
+                        <li>
+                            <Link to="/custom-hook">Customer Hook</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
