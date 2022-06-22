@@ -23,18 +23,29 @@ function Nav() {
 
     return (
         <nav className='nav'>
-            <ul className="nav-left">
+            <ul className="nav-left top-level-menu">
                 <li>
                     <Link to="/">Home</Link>
                 </li>
+                {
+                    auth &&
+                    <li>
+                        <Link to="/profile">Profile</Link>
+                    </li>
+                }
                 <li>
-                    <Link to="/glance">Hooks at a Glance</Link>
-                </li>
-                <li>
-                    <Link to="/to-do-example">ToDo Example</Link>
-                </li>
-                <li>
-                    <Link to="/to-do-example-with-reducer">ToDo Example With Reducer</Link>
+                    Example
+                    <ul className='second-level-menu'>
+                        <li>
+                            <Link to="/glance">Hooks at a Glance</Link>
+                        </li>
+                        <li>
+                            <Link to="/to-do-example">ToDo Example</Link>
+                        </li>
+                        <li>
+                            <Link to="/to-do-example-with-reducer">ToDo Example With Reducer</Link>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <div className='nav-right'>
