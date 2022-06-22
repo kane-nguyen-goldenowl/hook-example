@@ -51,6 +51,9 @@ function Nav() {
                         <li>
                             <Link to="/use-callback">Use Callback</Link>
                         </li>
+                        <li>
+                            <Link to="/use-memo">Use Memo</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
