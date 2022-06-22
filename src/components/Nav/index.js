@@ -48,6 +48,9 @@ function Nav() {
                         <li>
                             <Link to="/custom-hook">Customer Hook</Link>
                         </li>
+                        <li>
+                            <Link to="/use-callback">Use Callback</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>

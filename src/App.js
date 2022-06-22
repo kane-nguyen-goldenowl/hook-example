@@ -12,6 +12,7 @@ import ToDoExampleWithReducer from './screens/ToDoExampleWithReducer';
 import Login from './screens/Login';
 import Profile from './screens/Profile';
 import CustomHook from './screens/CustomHook';
+import UseCallbackExample from './screens/UseCallbackExample';
 
 import {
   LocaleProvider
@@ -41,6 +42,8 @@ function App() {
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>}>
             </Route>
             <Route path="custom-hook" element={<CustomHook />}>
+            </Route>
+            <Route path="use-callback" element={<UseCallbackExample />}>
             </Route>
           </Routes>
         </AuthProvider>
