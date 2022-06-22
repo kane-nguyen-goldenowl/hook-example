@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  useMemo,
   useState
 } from 'react';
 
@@ -14,13 +13,14 @@ export const LocaleProvider = ({ children }) => {
   const [locale, setLocale] = useState("VN");
   const locales = ["VN", "EN"];
 
-  const value = useMemo(
-    () => ({ locale, setLocale }),
-    [locale]
-  );
+  const value = {
+    locales,
+    locale,
+    setLocale
+  }
 
   return (
-    <LocaleContext.Provider value={{ locales, ...value }}>
+    <LocaleContext.Provider value={value}>
       {children}
     </LocaleContext.Provider>
   )
