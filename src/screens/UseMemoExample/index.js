@@ -33,19 +33,24 @@ function UseMemoExample() {
             <Nav />
             <div>
                 <div>
-                    UseMemoExample
+                    UseMemoExample: Sử dụng useMemo ghi nhớ lại giá trị để tránh tính toán lại giá trị đó
                 </div>
             </div>
             <div>
-                {
-                    light
-                        ? <div>LIGHT</div>
-                        : <div>NOT LIGHT</div>
-                }
-                <div>N: {n}</div>
-                <div>Sum: {sum}</div>
-                <button onClick={increaseN}>Increase N</button>
-                <button onClick={changeLight}>Change Light</button>
+                <div>
+                    {
+                        light
+                            ? <div>LIGHT</div>
+                            : <div>NOT LIGHT</div>
+                    }
+                    <button onClick={changeLight}>Change Light</button>
+                </div>
+                <div>
+                    <p>Tính tổng từ 0 đến N</p>
+                    <div>N: {n}</div>
+                    <div>Sum: {sum}</div>
+                    <button onClick={increaseN}>Increase N</button>
+                </div>
             </div>
         </React.Fragment>
     );
