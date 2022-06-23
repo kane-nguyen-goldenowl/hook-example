@@ -5,12 +5,19 @@ import Nav from '../../components/Nav';
 
 import LocaleContext from '../../contexts/LocaleContext';
 
+import './index.scss';
+
 function Home() {
     const { locales, locale, setLocale } = useContext(LocaleContext);
 
     return (
         <React.Fragment>
             <Nav />
+            <div>
+                <div className='home-title'>
+                    Home
+                </div>
+            </div>
             <div>
                 <button
                     onClick={() => {
