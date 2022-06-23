@@ -48,11 +48,14 @@ function UseDeferredValueExample() {
             <Nav />
             <div>
                 <div>
-                    UseDeferredValueExample
+                    UseDeferredValueExample: Sử dụng useDeferredValue để giảm độ ưu tiên của việc render danh sách product trùng với search key
                 </div>
             </div>
             <div>
-                <input type='text' onChange={handleSearchKeyChange}></input>
+                <div>
+                    <label>Search </label>
+                    <input type='text' onChange={handleSearchKeyChange}></input>
+                </div>
                 <ProductList productList={filteredProductList}></ProductList>
             </div>
         </React.Fragment>
