@@ -60,20 +60,25 @@ function UseCallbackExample() {
             <Nav />
             <div>
                 <div>
-                    UseCallbackExample
+                    UseCallbackExample: Sử dụng useCallback ghi nhớ hàm để tránh khởi tạo lại hàm đó
                 </div>
             </div>
             <div>
-                {
-                    light
-                        ? <div>LIGHT</div>
-                        : <div>NOT LIGHT</div>
-                }
-                <div>N: {n}</div>
-                <div>Sum: {sum}</div>
-                <button onClick={increaseN}>Increase N</button>
-                <CaculateSumButton onClick={caculateSum} />
-                <ChangeLightButton onClick={changeLight} />
+                <div>
+                    {
+                        light
+                            ? <div>LIGHT</div>
+                            : <div>NOT LIGHT</div>
+                    }
+                    <ChangeLightButton onClick={changeLight} />
+                </div>
+                <div>
+                    <p>Tính tổng từ 0 đến N</p>
+                    <div>N: {n}</div>
+                    <div>Sum: {sum}</div>
+                    <button onClick={increaseN}>Increase N</button>
+                    <CaculateSumButton onClick={caculateSum} />
+                </div>
             </div>
         </React.Fragment>
     );
