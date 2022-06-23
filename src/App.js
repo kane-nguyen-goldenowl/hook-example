@@ -17,6 +17,7 @@ import UseMemoExample from './screens/UseMemoExample';
 import UseTransitionExample from './screens/UseTransitionExample';
 import UseDeferredValueExample from './screens/UseDeferredValueExample';
 import UseSyncExternalStoreExample from './screens/UseSyncExternalStoreExample';
+import UseIdExample from './screens/UseIdExample';
 
 import {
   LocaleProvider
@@ -56,6 +57,8 @@ function App() {
             <Route path="use-deferred-value" element={<UseDeferredValueExample />}>
             </Route>
             <Route path="use-sync-external-store" element={<UseSyncExternalStoreExample />}>
+            </Route>
+            <Route path="use-id" element={<UseIdExample />}>
             </Route>
           </Routes>
         </AuthProvider>

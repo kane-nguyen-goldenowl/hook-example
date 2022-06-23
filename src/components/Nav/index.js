@@ -63,6 +63,9 @@ function Nav() {
                         <li>
                             <Link to="/use-sync-external-store">Use Sync External Store</Link>
                         </li>
+                        <li>
+                            <Link to="/use-id">Use Id</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
