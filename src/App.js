@@ -14,6 +14,7 @@ import Profile from './screens/Profile';
 import CustomHook from './screens/CustomHook';
 import UseCallbackExample from './screens/UseCallbackExample';
 import UseMemoExample from './screens/UseMemoExample';
+import UseTransitionExample from './screens/UseTransitionExample';
 
 import {
   LocaleProvider
@@ -47,6 +48,8 @@ function App() {
             <Route path="use-callback" element={<UseCallbackExample />}>
             </Route>
             <Route path="use-memo" element={<UseMemoExample />}>
+            </Route>
+            <Route path="use-transition" element={<UseTransitionExample />}>
             </Route>
           </Routes>
         </AuthProvider>

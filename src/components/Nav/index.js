@@ -54,6 +54,9 @@ function Nav() {
                         <li>
                             <Link to="/use-memo">Use Memo</Link>
                         </li>
+                        <li>
+                            <Link to="/use-transition">Use Transition</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
