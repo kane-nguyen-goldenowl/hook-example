@@ -15,6 +15,7 @@ import CustomHook from './screens/CustomHook';
 import UseCallbackExample from './screens/UseCallbackExample';
 import UseMemoExample from './screens/UseMemoExample';
 import UseTransitionExample from './screens/UseTransitionExample';
+import UseDeferredValueExample from './screens/UseDeferredValueExample';
 
 import {
   LocaleProvider
@@ -50,6 +51,8 @@ function App() {
             <Route path="use-memo" element={<UseMemoExample />}>
             </Route>
             <Route path="use-transition" element={<UseTransitionExample />}>
+            </Route>
+            <Route path="use-deferred-value" element={<UseDeferredValueExample />}>
             </Route>
           </Routes>
         </AuthProvider>

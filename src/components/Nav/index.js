@@ -57,6 +57,9 @@ function Nav() {
                         <li>
                             <Link to="/use-transition">Use Transition</Link>
                         </li>
+                        <li>
+                            <Link to="/use-deferred-value">Use Deferred Value</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
