@@ -53,11 +53,14 @@ function UseTransitionExample() {
             <Nav />
             <div>
                 <div>
-                    UseTransitionExample
+                    UseTransitionExample: Sử dụng useTransition để giảm độ ưu tiên của việc render danh sách product trùng với search key
                 </div>
             </div>
             <div>
-                <input type='text' onChange={handleSearchKeyChange}></input>
+                <div>
+                    <label>Search </label>
+                    <input type='text' onChange={handleSearchKeyChange}></input>
+                </div>
                 {
                     isPending &&
                     <div>Updating...</div>
