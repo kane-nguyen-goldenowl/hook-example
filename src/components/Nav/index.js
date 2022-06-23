@@ -60,6 +60,9 @@ function Nav() {
                         <li>
                             <Link to="/use-deferred-value">Use Deferred Value</Link>
                         </li>
+                        <li>
+                            <Link to="/use-sync-external-store">Use Sync External Store</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
