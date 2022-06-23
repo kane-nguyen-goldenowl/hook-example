@@ -4,14 +4,7 @@ import React, {
 } from 'react';
 import Nav from '../../components/Nav';
 
-const sumFromZeroToN = (n) => {
-    console.log('sumFromZeroToN');
-    let result = 0;
-    for (let index = 0; index < n; index++) {
-        result += n;
-    }
-    return result;
-}
+import sumFromZeroToN from '../../utils/sumFromZeroToN';
 
 const CaculateSumButton = React.memo(({ onClick }) => {
     console.log('render CaculateSumButton');
