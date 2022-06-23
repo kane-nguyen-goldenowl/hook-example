@@ -73,14 +73,20 @@ function UseSyncExternalStoreExample() {
             <Nav />
             <div>
                 <div>
-                    UseSyncExternalStoreExample
+                    UseSyncExternalStoreExample: Sử dụng custom library store với useSyncExternalStore
                 </div>
             </div>
             <div>
-                <Counter />
-                <Counter />
-                <TextBox />
-                <TextBox />
+                <div>
+                    <p>Counter</p>
+                    <Counter />
+                    <Counter />
+                </div>
+                <div>
+                    <p>TextBox</p>
+                    <TextBox />
+                    <TextBox />
+                </div>
             </div>
         </React.Fragment>
     );
