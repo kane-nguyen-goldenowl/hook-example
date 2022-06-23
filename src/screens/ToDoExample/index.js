@@ -15,14 +15,14 @@ function ToDoExample() {
 
     function handleToDoAdd() {
         console.log("handleToDoAdd")
-        setToDoList([...toDoList, todo]);
+        setToDoList([...toDoList, { index: toDoList.length + 1, todo }]);
         setTodo("");
     }
 
     function handleToDoDelete(index) {
         console.log("handleToDoDelete", index)
-        toDoList.splice(index, 1)
-        setToDoList([...toDoList]);
+        const filterdToDoList = toDoList.filter(item => item.index !== index);
+        setToDoList(filterdToDoList);
     }
 
     function handleSubmitForm(event) {
@@ -31,14 +31,14 @@ function ToDoExample() {
 
     function renderToDoList() {
         console.log("renderToDoList", toDoList)
-        return toDoList.map((item, index) =>
+        return toDoList.map((item) =>
         (
-            <li key={index} >
-                {item}
+            <li key={item.index} >
+                {item.todo}
                 <span
                     className="todo-delete-btn"
                     onClick={() => {
-                        handleToDoDelete(index)
+                        handleToDoDelete(item.index)
                     }}> [DELETE] </span>
             </li >
         )

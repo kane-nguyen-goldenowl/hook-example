@@ -27,11 +27,10 @@ const reducer = (state, action) => {
                 ]
             }
         case DELETE_TO_DO:
-            const newToDoList = [...state.toDoList];
-            newToDoList.splice(action.payload, 1);
+            const filterdToDoList = state.toDoList.filter(item => item.index !== action.payload);
             return {
                 ...state,
-                toDoList: newToDoList
+                toDoList: filterdToDoList
             }
         default:
             return state;

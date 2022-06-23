@@ -26,7 +26,7 @@ function ToDoExample() {
 
     function handleToDoAdd() {
         console.log("handleToDoAdd")
-        dispatch(addToDo(todo));
+        dispatch(addToDo({ index: toDoList.length + 1, todo }));
     }
 
     function handleToDoDelete(index) {
@@ -40,14 +40,14 @@ function ToDoExample() {
 
     function renderToDoList() {
         console.log("renderToDoList", toDoList)
-        return toDoList.map((item, index) =>
+        return toDoList.map((item) =>
         (
-            <li key={index} >
-                {item}
+            <li key={item.index} >
+                {item.todo}
                 <span
                     className="todo-delete-btn"
                     onClick={() => {
-                        handleToDoDelete(index)
+                        handleToDoDelete(item.index)
                     }}> [DELETE] </span>
             </li >
         )
