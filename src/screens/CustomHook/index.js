@@ -18,10 +18,11 @@ function CustomHook() {
             <Nav />
             <div>
                 <div>
-                    CustomHook
+                    CustomHook: Custom hook lấy dữ liệu khách hàng
                 </div>
             </div>
             <div>
+                <p>Danh sách khách hàng:</p>
                 {isLoading
                     ? "Loading..."
                     : <ul>{renderClientList()}</ul>}
