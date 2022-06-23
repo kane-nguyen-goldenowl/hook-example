@@ -66,6 +66,9 @@ function Nav() {
                         <li>
                             <Link to="/use-id">Use Id</Link>
                         </li>
+                        <li>
+                            <Link to="/react-hook-form">React Hook Form</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>

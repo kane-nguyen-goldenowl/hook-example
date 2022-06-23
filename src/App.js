@@ -18,6 +18,7 @@ import UseTransitionExample from './screens/UseTransitionExample';
 import UseDeferredValueExample from './screens/UseDeferredValueExample';
 import UseSyncExternalStoreExample from './screens/UseSyncExternalStoreExample';
 import UseIdExample from './screens/UseIdExample';
+import ReactHookFormExample from './screens/ReactHookFormExample';
 
 import {
   LocaleProvider
@@ -59,6 +60,8 @@ function App() {
             <Route path="use-sync-external-store" element={<UseSyncExternalStoreExample />}>
             </Route>
             <Route path="use-id" element={<UseIdExample />}>
+            </Route>
+            <Route path="react-hook-form" element={<ReactHookFormExample />}>
             </Route>
           </Routes>
         </AuthProvider>
