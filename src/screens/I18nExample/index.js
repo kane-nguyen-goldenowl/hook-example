@@ -22,12 +22,15 @@ function I18nExample() {
             </div>
             <div>
                 <h1>{t('Welcome to React')}</h1>
-                <button type="button" onClick={() => changeLanguage('fr')}>
-                    fr
-                </button>
-                <button type="button" onClick={() => changeLanguage('en')}>
-                    en
-                </button>
+                <div>
+                    Change Locale:
+                    <button type="button" onClick={() => changeLanguage('fr')}>
+                        fr
+                    </button>
+                    <button type="button" onClick={() => changeLanguage('en')}>
+                        en
+                    </button>
+                </div>
             </div>
         </React.Fragment>
     );
