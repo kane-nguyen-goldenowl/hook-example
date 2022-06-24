@@ -72,6 +72,9 @@ function Nav() {
                         <li>
                             <Link to="/article-with-redux">Article with redux example</Link>
                         </li>
+                        <li>
+                            <Link to="/code-splitting">Code splitting</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -21,6 +21,7 @@ import UseSyncExternalStoreExample from './screens/UseSyncExternalStoreExample';
 import UseIdExample from './screens/UseIdExample';
 import ReactHookFormExample from './screens/ReactHookFormExample';
 import ArticleWithReduxExample from './screens/ArticleWithReduxExample';
+import CodeSplittingExample from './screens/CodeSplittingExample';
 
 import {
   LocaleProvider
@@ -69,6 +70,8 @@ function App() {
               <Route path="react-hook-form" element={<ReactHookFormExample />}>
               </Route>
               <Route path="article-with-redux" element={<ArticleWithReduxExample />}>
+              </Route>
+              <Route path="code-splitting" element={<CodeSplittingExample />}>
               </Route>
             </Routes>
           </AuthProvider>
