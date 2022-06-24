@@ -22,6 +22,7 @@ import UseIdExample from './screens/UseIdExample';
 import ReactHookFormExample from './screens/ReactHookFormExample';
 import ArticleWithReduxExample from './screens/ArticleWithReduxExample';
 import CodeSplittingExample from './screens/CodeSplittingExample';
+import PropTypesExample from './screens/PropTypesExample';
 
 import {
   LocaleProvider
@@ -72,6 +73,8 @@ function App() {
               <Route path="article-with-redux" element={<ArticleWithReduxExample />}>
               </Route>
               <Route path="code-splitting" element={<CodeSplittingExample />}>
+              </Route>
+              <Route path="prop-types" element={<PropTypesExample />}>
               </Route>
             </Routes>
           </AuthProvider>

@@ -75,6 +75,9 @@ function Nav() {
                         <li>
                             <Link to="/code-splitting">Code splitting</Link>
                         </li>
+                        <li>
+                            <Link to="/prop-types">PropTypes example</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
