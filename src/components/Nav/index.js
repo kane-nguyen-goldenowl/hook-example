@@ -78,6 +78,9 @@ function Nav() {
                         <li>
                             <Link to="/prop-types">PropTypes example</Link>
                         </li>
+                        <li>
+                            <Link to="/i18n">I18n example</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>

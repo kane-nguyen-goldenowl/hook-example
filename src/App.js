@@ -23,6 +23,7 @@ import ReactHookFormExample from './screens/ReactHookFormExample';
 import ArticleWithReduxExample from './screens/ArticleWithReduxExample';
 import CodeSplittingExample from './screens/CodeSplittingExample';
 import PropTypesExample from './screens/PropTypesExample';
+import I18nExample from './screens/I18nExample';
 
 import {
   LocaleProvider
@@ -75,6 +76,8 @@ function App() {
               <Route path="code-splitting" element={<CodeSplittingExample />}>
               </Route>
               <Route path="prop-types" element={<PropTypesExample />}>
+              </Route>
+              <Route path="i18n" element={<I18nExample />}>
               </Route>
             </Routes>
           </AuthProvider>
