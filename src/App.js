@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { Provider } from 'react-redux';
 
 import Home from './screens/Home';
 import Glance from './screens/Glance';
@@ -19,6 +20,7 @@ import UseDeferredValueExample from './screens/UseDeferredValueExample';
 import UseSyncExternalStoreExample from './screens/UseSyncExternalStoreExample';
 import UseIdExample from './screens/UseIdExample';
 import ReactHookFormExample from './screens/ReactHookFormExample';
+import ArticleWithReduxExample from './screens/ArticleWithReduxExample';
 
 import {
   LocaleProvider
@@ -29,43 +31,49 @@ import {
 
 import ProtectedRoute from './components/ProtectedRoute';
 
+import store from './store';
+
 function App() {
   return (
     <BrowserRouter>
-      <LocaleProvider>
-        <AuthProvider>
-          <Routes>
-            <Route path="/" element={<Home />}>
-            </Route>
-            <Route path="/glance" element={<Glance />}>
-            </Route>
-            <Route path="/to-do-example" element={<ToDoExample />}>
-            </Route>
-            <Route path="/to-do-example-with-reducer" element={<ToDoExampleWithReducer />}>
-            </Route>
-            <Route path="/login" element={<Login />}>
-            </Route>
-            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>}>
-            </Route>
-            <Route path="custom-hook" element={<CustomHook />}>
-            </Route>
-            <Route path="use-callback" element={<UseCallbackExample />}>
-            </Route>
-            <Route path="use-memo" element={<UseMemoExample />}>
-            </Route>
-            <Route path="use-transition" element={<UseTransitionExample />}>
-            </Route>
-            <Route path="use-deferred-value" element={<UseDeferredValueExample />}>
-            </Route>
-            <Route path="use-sync-external-store" element={<UseSyncExternalStoreExample />}>
-            </Route>
-            <Route path="use-id" element={<UseIdExample />}>
-            </Route>
-            <Route path="react-hook-form" element={<ReactHookFormExample />}>
-            </Route>
-          </Routes>
-        </AuthProvider>
-      </LocaleProvider>
+      <Provider store={store}>
+        <LocaleProvider>
+          <AuthProvider>
+            <Routes>
+              <Route path="/" element={<Home />}>
+              </Route>
+              <Route path="/glance" element={<Glance />}>
+              </Route>
+              <Route path="/to-do-example" element={<ToDoExample />}>
+              </Route>
+              <Route path="/to-do-example-with-reducer" element={<ToDoExampleWithReducer />}>
+              </Route>
+              <Route path="/login" element={<Login />}>
+              </Route>
+              <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>}>
+              </Route>
+              <Route path="custom-hook" element={<CustomHook />}>
+              </Route>
+              <Route path="use-callback" element={<UseCallbackExample />}>
+              </Route>
+              <Route path="use-memo" element={<UseMemoExample />}>
+              </Route>
+              <Route path="use-transition" element={<UseTransitionExample />}>
+              </Route>
+              <Route path="use-deferred-value" element={<UseDeferredValueExample />}>
+              </Route>
+              <Route path="use-sync-external-store" element={<UseSyncExternalStoreExample />}>
+              </Route>
+              <Route path="use-id" element={<UseIdExample />}>
+              </Route>
+              <Route path="react-hook-form" element={<ReactHookFormExample />}>
+              </Route>
+              <Route path="article-with-redux" element={<ArticleWithReduxExample />}>
+              </Route>
+            </Routes>
+          </AuthProvider>
+        </LocaleProvider>
+      </Provider>
     </BrowserRouter>
   );
 }

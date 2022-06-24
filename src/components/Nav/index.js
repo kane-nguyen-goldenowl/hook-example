@@ -69,6 +69,9 @@ function Nav() {
                         <li>
                             <Link to="/react-hook-form">React Hook Form</Link>
                         </li>
+                        <li>
+                            <Link to="/article-with-redux">Article with redux example</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
