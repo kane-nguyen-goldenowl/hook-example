@@ -21,6 +21,8 @@ function ArticleList() {
             {articles.map((article) => (
                 <div key={article.id}>
                     <p>ID: {article.id}</p>
+                    <p>Title: {article.title}</p>
+                    <p>Content: {article.content}</p>
                 </div>
             ))}
         </>
