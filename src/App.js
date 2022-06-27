@@ -24,6 +24,7 @@ import ArticleWithReduxExample from './screens/ArticleWithReduxExample';
 import CodeSplittingExample from './screens/CodeSplittingExample';
 import PropTypesExample from './screens/PropTypesExample';
 import I18nExample from './screens/I18nExample';
+import ToastApp from './screens/ToastApp';
 
 import {
   LocaleProvider
@@ -78,6 +79,8 @@ function App() {
               <Route path="prop-types" element={<PropTypesExample />}>
               </Route>
               <Route path="i18n" element={<I18nExample />}>
+              </Route>
+              <Route path="toast-app" element={<ToastApp />}>
               </Route>
             </Routes>
           </AuthProvider>

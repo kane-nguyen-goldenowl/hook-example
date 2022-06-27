@@ -1,0 +1,202 @@
+$base-green: #5cb85c;
+$dark-green: #5cb85d;
+$base-blue: #5bc0de;
+$dark-blue: #5bc0df;
+$base-red: #d9534f;
+$dark-red: #d95343;
+$base-orange: #f0ad4e;
+$dark-orange: #f0ad4f;
+
+.toast-app-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .row {
+        margin: 5px 0px;
+    }
+
+    .toast-app-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+
+        .toast-app-header {
+            display: flex;
+            justify-content: center;
+
+            .span {
+                color: black;
+            }
+        }
+
+        .toast-app-body {
+            .list-button {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                button {
+                    margin: 0px 5px;
+
+                }
+            }
+        }
+    }
+}
+
+.success {
+    border: 2px solid $base-green;
+    background-color: $base-green;
+    color: #fff;
+
+    :focus {
+        color: #171e29;
+    }
+
+    .hover {
+        background-color: $dark-green;
+        border-color: $dark-green;
+    }
+
+    .active {
+        background-color: $dark-green;
+        border-color: $dark-green;
+    }
+}
+
+.info {
+    border: 2px solid $base-blue;
+    background-color: $base-blue;
+    color: #fff;
+
+    :focus {
+        color: #171e29;
+    }
+
+    .hover {
+        background-color: $dark-blue;
+        border-color: $dark-blue;
+    }
+
+    .active {
+        background-color: $dark-blue;
+        border-color: $dark-blue;
+    }
+}
+
+.danger {
+    border: 2px solid $base-red;
+    background-color: $base-red;
+    color: #fff;
+
+    :focus {
+        color: #171e29;
+    }
+
+    .hover {
+        background-color: $dark-red;
+        border-color: $dark-red;
+    }
+
+    .active {
+        background-color: $dark-red;
+        border-color: $dark-red;
+    }
+}
+
+.warning {
+    border: 2px solid $base-orange;
+    background-color: $base-orange;
+    color: #fff;
+
+    :focus {
+        color: #171e29;
+    }
+
+    .hover {
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+    }
+
+    .active {
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+    }
+}
+
+// toast
+.toast-list {
+    position: fixed;
+
+    .toast {
+        display: flex;
+        flex-direction: row;
+
+        margin-top: 10px;
+        justify-content: space-between;
+
+        .toast__content {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            min-width: 150px;
+
+            .toast__content__title {
+                font-size: small;
+            }
+
+            .toast__content__description {
+                margin-top: 10px;
+            }
+        }
+
+        button {
+            border: 1px solid transparent;
+            background-color: transparent;
+            padding: 5px;
+        }
+    }
+
+    &.-top-right {
+        top: 20px;
+        right: 20px;
+
+        .toast {
+            transition: transform .6s ease-in;
+            animation: toast-in-right .7s;
+        }
+    }
+
+    &.-top-left {
+        top: 20px;
+        left: 20px;
+
+        .toast {
+            transition: transform .6s ease-in;
+            animation: toast-in-left .7s;
+        }
+    }
+}
+
+@keyframes toast-in-right {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes toast-in-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

@@ -81,6 +81,9 @@ function Nav() {
                         <li>
                             <Link to="/i18n">I18n example</Link>
                         </li>
+                        <li>
+                            <Link to="/toast-app">Toast App</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
