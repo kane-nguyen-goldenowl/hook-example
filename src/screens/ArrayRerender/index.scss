@@ -1,0 +1,17 @@
+.item-list {
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item {
+        padding: 5px 5px;
+        margin: 0px 5px;
+        border: 1px solid black;
+    }
+}
+
+.item-list-action {
+    margin: 5px 0px;
+}

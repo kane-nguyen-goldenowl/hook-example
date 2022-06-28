@@ -25,6 +25,7 @@ import CodeSplittingExample from './screens/CodeSplittingExample';
 import PropTypesExample from './screens/PropTypesExample';
 import I18nExample from './screens/I18nExample';
 import ToastApp from './screens/ToastApp';
+import ArrayRerender from './screens/ArrayRerender';
 
 import {
   LocaleProvider
@@ -81,6 +82,8 @@ function App() {
               <Route path="i18n" element={<I18nExample />}>
               </Route>
               <Route path="toast-app" element={<ToastApp />}>
+              </Route>
+              <Route path="array-rerender" element={<ArrayRerender />}>
               </Route>
             </Routes>
           </AuthProvider>

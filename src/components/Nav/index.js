@@ -84,6 +84,9 @@ function Nav() {
                         <li>
                             <Link to="/toast-app">Toast App</Link>
                         </li>
+                        <li>
+                            <Link to="/array-rerender">Array Rerender</Link>
+                        </li>
                     </ul>
                 </li>
             </ul>
